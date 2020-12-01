@@ -28,3 +28,14 @@ Users create their identity and can allow colleges, employers, and healthcare pr
 An example of this being useful would be a fresh college graduate who is searching for a job. Their college could update their degree in the contract so that prospective employers could be confident that they had the education they claimed. Once employed, healthcare providers could see the employment status and add in the coverage associated with the company.
 
 This use case would never work in the world today as too much information would be public but a similar, more advanced idea could work in my opinion. 
+
+
+# Truffle Tests
+
+I could not get the hang of Truffle tests to save my life. I should have reached out for help but I suck so it is what it is. 
+
+testUserStatus tests that a default user will have a status of 0 (no degree) upon deployment
+
+testDegree tests that a default user will no degree upon deployment.
+
+I could have continued down that path of testing but I feel that would have been cheating really
