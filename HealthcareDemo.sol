@@ -1,10 +1,12 @@
 pragma solidity >=0.6.0 <0.7.0;
 
+/// @title A contract that creates different user roles for the Healthcare Demo application
+/// @author Daniel Maguire
+/// @notice You can use this contract for non-medical use cases as it is only a demo
+/// @dev All function calls are currently implemented without side effects
+
 contract HealthcareDemo {
-    /// @title A contract that creates different user roles for the Healthcare Demo application
-    /// @author Daniel Maguire
-    /// @notice You can use this contract for non-medical use cases as it is only a demo
-    /// @dev All function calls are currently implemented without side effects
+    /// @notice Create user accounts and delegate access
 
     address owner = msg.sender;
     bool private stopped = false;
@@ -59,7 +61,8 @@ contract HealthcareDemo {
         owner = msg.sender;
         user = User(0, "", "", "", msg.sender);
     }
-
+    
+    /// @dev circuit breaks the contract
     function stopContractActivity() isOwner public {
         stopped = !stopped;
     }
@@ -82,18 +85,26 @@ contract HealthcareDemo {
         emit LogCoverage(user.healthcoverage);
     }
 
+    /// @notice Returns the users current status
+    /// @dev Returns only a fixed number.
     function returnUserStatus() public view returns(uint) {
         return user.currentstatus;
     }
 
+    /// @notice Returns the users degree
+    /// @dev Returns a string.
     function returnUserDegree() public view returns(string memory) {
         return user.degree;
     }
 
+    /// @notice Returns the users job title
+    /// @dev Returns a string.
     function returnUserEmployer() public view returns(string memory) {
         return user.employer;
     }
 
+    /// @notice Returns the healthcare provider
+    /// @dev Returns a string.
     function returnUserHealthcareProvider() public view returns(string memory) {
         return user.healthcoverage;
     }
@@ -110,6 +121,8 @@ contract HealthcareDemo {
         roles[provider] = 2;
     }
 
+    /// @notice Returns the role of an account
+    /// @dev Returns only a fixed number.
     function checkRole(address adminInQuestion) public view returns(uint) {
         return roles[adminInQuestion];
     }
