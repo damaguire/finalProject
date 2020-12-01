@@ -18,3 +18,13 @@ Once those are installed you can run the following command to boot meteor
 Once meteor is booted (assuming no errors) you should be able to navigate to the following url to see the project:
 
 ```localhost:3000``` 
+
+# About
+
+This project was created with the thought that if we had a public way to present common information that we could delegate access to, we could live in a more advanced society. I chose to create a contract that allows for users to create their own identity based on an Ethereum account and delegate certain aspects of their history to other ogranizations.
+
+Users create their identity and can allow colleges, employers, and healthcare providers to update what information they have associated with the user. 
+
+An example of this being useful would be a fresh college graduate who is searching for a job. Their college could update their degree in the contract so that prospective employers could be confident that they had the education they claimed. Once employed, healthcare providers could see the employment status and add in the coverage associated with the company.
+
+This use case would never work in the world today as too much information would be public but a similar, more advanced idea could work in my opinion. 
